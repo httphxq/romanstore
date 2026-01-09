@@ -22,6 +22,10 @@
   font-weight: 700;
   font-style: normal;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   line-height: 1.6;
@@ -75,29 +79,33 @@ body .container header h1 {
   margin: 0;
   font-size: 20px;
 }
-body .container header nav button {
+body .container header nav {
+  display: flex;
+  align-items: center;
+}
+body .container header nav a {
   margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
   background: none;
   border: none;
-  color: black;
   cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 10px;
 }
-body .container header nav button:hover {
-  text-decoration: underline;
-}
-body .container header nav button h4 {
-  color: rgb(110, 110, 110);
-  padding: 5px 10px;
+body .container header nav a h4 {
   margin: 0;
+  color: rgb(110, 110, 110);
+}
+body .container header nav a:hover {
+  text-decoration: underline;
 }
 body .container header nav .sign_up_button {
   border: 1px solid rgb(210, 149, 169);
-  border-radius: 10px;
 }
 body .container header nav .sign_up_button h4 {
   color: rgb(110, 110, 110);
-  padding: 10px 15px;
-  margin: 0;
 }
 body .container header nav .sign_up_button:hover {
   text-decoration: none;
@@ -105,8 +113,6 @@ body .container header nav .sign_up_button:hover {
 }
 body .container header nav .sign_up_button:hover h4 {
   color: rgb(210, 149, 169);
-  padding: 10px 15px;
-  margin: 0;
 }
 body .container main {
   margin: 0px;
@@ -136,59 +142,36 @@ body .container main .main_info .main_info_about_us {
   padding: 15px;
 }
 body .container main .main_info .main_info_about_us .main_info_buttons {
-  margin: 0;
+  display: flex;
+  gap: 10px;
   padding: 15px 0;
 }
-body .container main .main_info .main_info_about_us .main_info_buttons .our_events_main_button {
-  background: none;
-  background-color: rgb(210, 149, 169);
-  border: none;
-  color: black;
+body .container main .main_info .main_info_about_us .main_info_buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  border: 1px solid rgb(210, 149, 169);
   border-radius: 10px;
-}
-body .container main .main_info .main_info_about_us .main_info_buttons .our_events_main_button h4 {
-  color: rgb(255, 255, 255);
+  border: 1px solid rgb(210, 149, 169);
   padding: 10px 15px;
-  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  transition: 0.2s ease;
+}
+body .container main .main_info .main_info_about_us .main_info_buttons .our_events_main_button {
+  background-color: rgb(210, 149, 169);
+  color: white;
 }
 body .container main .main_info .main_info_about_us .main_info_buttons .our_events_main_button:hover {
-  text-decoration: none;
-  background-color: rgba(198, 198, 198, 0.156);
-}
-body .container main .main_info .main_info_about_us .main_info_buttons .our_events_main_button:hover h4 {
+  background-color: rgba(210, 149, 169, 0.15);
   color: rgb(210, 149, 169);
-  padding: 10px 15px;
-  margin: 0;
 }
 body .container main .main_info .main_info_about_us .main_info_buttons .sign_up_main_button {
-  margin-left: 10px;
-  background: none;
-  border: none;
-  color: black;
-  cursor: pointer;
-  border: 1px solid rgb(210, 149, 169);
-  border-radius: 10px;
-}
-body .container main .main_info .main_info_about_us .main_info_buttons .sign_up_main_button h4 {
   color: rgb(110, 110, 110);
-  padding: 10px 15px;
-  margin: 0;
 }
 body .container main .main_info .main_info_about_us .main_info_buttons .sign_up_main_button:hover {
-  text-decoration: none;
-  background-color: rgba(198, 198, 198, 0.156);
-}
-body .container main .main_info .main_info_about_us .main_info_buttons .sign_up_main_button:hover h4 {
+  background-color: rgba(210, 149, 169, 0.15);
   color: rgb(210, 149, 169);
-  padding: 10px 15px;
-  margin: 0;
-}
-body .container main .main_info .main_info_about_us .main_info_buttons h4 {
-  color: rgb(110, 110, 110);
-  padding: 5px 10px;
-  margin: 0;
 }
 body .container main .main_info img {
   max-width: 250px;
