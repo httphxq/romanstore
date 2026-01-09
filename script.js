@@ -10,3 +10,4 @@ document.querySelectorAll('[data-target]').forEach(link => {
         }
     });
 });
+
