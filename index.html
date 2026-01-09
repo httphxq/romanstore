@@ -61,7 +61,7 @@
                     <h3>
                         Pregnancy event
                     </h3>
-                    <h4>
+                    <h4 class="event_description">
                         Встреча для будущих мам, где мы обсудим важные темы беременности и подготовки к родам.
                     </h4>
                     <h4>7 февраля</h4>
@@ -71,7 +71,7 @@
                     <h3>
                         Mom's event
                     </h3>
-                    <h4>
+                    <h4 class="event_description">
                         Встреча для мам, где мы обсудим важные темы материнства и ухода за детьми.
                     </h4>
                     <h4>7 марта</h4>
@@ -81,7 +81,7 @@
                     <h3>
                         Planning
                     </h3>
-                    <h4>
+                    <h4 class="event_description">
                         Встреча для будущих мам, где мы обсудим важные темы планирования беременности.
                     </h4>
                     <h4>19 апреля</h4>
@@ -91,46 +91,58 @@
             </section>
 
         </section>
-        <h2>Текстиль</h2>
+        
         <section class="textile">
-            
+        <h2>Текстиль</h2>    
             <div class="textile_items">
                 <div class="textile_item">
-                    <h4>Пеленки</h4>
-                    <p>Удобные и мягкие пеленки для вашего малыша.</p>
+                    <h3>Пеленки</h3>
+                    <h4>Удобные и мягкие пеленки для вашего малыша.</h4>
                 </div>
                 <div class="textile_item">
-                    <h4>Одеяла</h4>
-                    <p>Теплые и уютные одеяла для комфортного сна.</p>
+                    <h3>Одеяла</h3>
+                    <h4>Теплые и уютные одеяла для комфортного сна.</h4>
                 </div>
                 <div class="textile_item">
-                    <h4>Боди</h4>
-                    <p>Яркие и безопасные боди для вашего малыша.</p>
+                    <h3>Боди</h3>
+                    <h4>Яркие и безопасные боди для вашего малыша.</h4>
                 </div>
             </div>
         </section>
-        <h2>Записаться на мероприятие</h2>
+        
         <section class="sign_up">
+
+            <h2>Записаться на мероприятие</h2>
             <form>
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="event">Мероприятие:</label>
-                <select id="event" name="event" required>
-                    <option value="pregnancy">Pregnancy event 7 февраля</option>
-                    <option value="mom">Mom's event 7 марта</option>
-                    <option value="planning">Планирование беременности 19 апреля</option>
-                </select>
-                <button type="submit">Записаться</button>
+
+                <div class="all_forms_container">
+                    <div class="form_container">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form_container">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form_container">
+                        <label for="event">Мероприятие:</label>
+                        <select id="event" name="event" required>
+                            <option value="pregnancy">Pregnancy event 7 февраля</option>
+                            <option value="mom">Mom's event 7 марта</option>
+                            <option value="planning">Планирование беременности 19 апреля</option>
+                        </select>
+                    </div>
+
+                </div>
+                <button class="submit"><h4>Записаться</h4></button>
             </form>
         </section>
        
 
     </main>
-    <section class="footer">
+    <footer>
         <p>© 2026 RomanStore. Все права защищены.</p>
-    </section>
+    </footer>
 </div>
 
 </body>

@@ -236,7 +236,7 @@ body .container main .about_us .about_us_container .about_us_catalog {
 }
 body .container .events {
   margin: 0;
-  padding: 30px 0;
+  padding: 50px 0 25px;
 }
 body .container .events h2 {
   margin: 0;
@@ -251,12 +251,22 @@ body .container .events .events_list .event_list {
   width: 25%;
   gap: 20px;
   height: 350px;
-  background-color: #ffeaf5;
+  background-color: rgba(253, 228, 245, 0.6039215686);
   border-radius: 15px;
   padding: 0 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 4px 14px 30px 7px rgba(43, 67, 85, 0.2);
+}
+body .container .events .events_list .event_list .event_description {
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.7764705882);
+  box-shadow: 4px 14px 25px -8px rgba(34, 60, 80, 0.2);
+}
+body .container .textile {
+  padding: 25px 0;
 }
 body .container .textile .textile_items {
   display: flex;
@@ -265,34 +275,72 @@ body .container .textile .textile_items {
 body .container .textile .textile_items .textile_item {
   margin-bottom: 20px;
   width: 25%;
+  gap: 20px;
+  height: 350px;
+  background-color: rgba(253, 228, 245, 0.6039215686);
+  border-radius: 15px;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 14px 30px 7px rgba(43, 67, 85, 0.2);
+}
+body .container .textile .textile_items .textile_item h4 {
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.7764705882);
+  box-shadow: 4px 14px 25px -8px rgba(34, 60, 80, 0.2);
 }
 body .container .sign_up {
-  margin-top: 20px;
-  display: flex;
+  margin: 40px;
+}
+body .container .sign_up h2 {
+  text-align: center;
 }
 body .container .sign_up form {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
+  align-items: center;
 }
-body .container .sign_up form label {
-  margin-bottom: 5px;
+body .container .sign_up form .all_forms_container {
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+  padding: 20px 0;
+  margin: 15px;
 }
-body .container .sign_up form input, body .container .sign_up form select {
+body .container .sign_up form .all_forms_container .form_container label {
+  margin: 0 15px 5px 0;
+}
+body .container .sign_up form .all_forms_container .form_container input, body .container .sign_up form .all_forms_container .form_container select {
   margin-bottom: 10px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-body .container .sign_up form button {
-  padding: 10px;
-  background-color: #5cb85c;
-  color: white;
+body .container .sign_up .submit {
+  margin: 0;
+  background-color: rgb(210, 149, 169);
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 4px;
+  width: 30vw;
+}
+body .container .sign_up .submit h4 {
+  margin: 10px 15px;
+}
+body .container .sign_up .submit {
   cursor: pointer;
 }
-body .container .sign_up form button:hover {
-  background-color: rgb(68.2692307692, 156.7307692308, 68.2692307692);
+body .container .sign_up .submit:hover {
+  background-color: white;
+  border: 1px solid rgb(210, 149, 169);
+  color: rgb(210, 149, 169);
+}
+body .container footer {
+  text-align: center;
+  padding: 20px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
