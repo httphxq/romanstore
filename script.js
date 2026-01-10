@@ -11,3 +11,14 @@ document.querySelectorAll('[data-target]').forEach(link => {
     });
 });
 
+const curtain = document.querySelector('.top-curtain');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const maxFade = 1000; 
+
+    let opacity = 1 - scrollY / maxFade;
+    if (opacity < 0) opacity = 0;
+
+    curtain.style.opacity = opacity;
+});

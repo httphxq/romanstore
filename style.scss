@@ -38,9 +38,24 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    .top-curtain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1500px; 
+        background: linear-gradient(
+            to bottom,
+            rgb(78, 53, 41),
+            rgba(255, 255, 255, 0)
+        );
+        pointer-events: none; 
+        z-index: 999;
+        transition: opacity 0.1s ease;
+        }
     h1{
         font-weight: 700;
-        font-size: 36px;
+        font-size: 50px;
     }
     h2 {
         font-weight: 600;
@@ -55,7 +70,7 @@ body {
         font-size: 16px;
     }
     h5 {
-        font-weight: 300;
+        font-weight: 600;
         font-size: 14px;
     }
     p {
@@ -66,15 +81,16 @@ body {
         max-width: 1200px;
         width: 100%;
         margin: auto;
-        padding: 20px;
+        padding: 0 20px 20px ;
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 10px;
-            padding: 10px 0 30px 0;
+            padding: 60px 0 100px 0;
             position: relative;
             flex-wrap: wrap;
+            
              &::after {
             content: '';
             position: absolute;
@@ -88,8 +104,19 @@ body {
             padding: 0;
             }
             h1 {
-                margin: 0;
-                font-size: 20px;
+                margin: 0 0 15px;
+                color: white;
+                z-index: 1000;
+            }
+            h2 {
+                color: white;
+                z-index: 1000;
+                margin: 0 0 10px;
+            }
+            h3 {
+                color: white;
+                z-index: 1000;
+                margin: 80px 0 50px;
             }
             nav {
                 display: flex;
@@ -106,12 +133,14 @@ body {
                     cursor: pointer;
                     padding: 8px 12px;
                     border-radius: 10px;
+                    transition: 0.2s ease;
                     h4 {
                     margin: 0;
-                    color: rgb(110, 110, 110);
+                    color: white;
+                    z-index: 1000;
                     }
                     &:hover {
-                    text-decoration: underline;
+                        text-decoration: underline;
                     }
                 }
                 .events_button {
@@ -125,23 +154,26 @@ body {
                     padding: 5px 15px;
                 }
                 .sign_up_button {
-                    margin: 0 10px;
-                    border: 1px solid rgb(210, 149, 169);
+                    margin: 10px;
+                    border: 1px solid #8B4513;
+                    background-color: #8B4513;
+                    
                     h4 {
-                    color: rgb(110, 110, 110);
+                    color: #ffffff;
                     }
                     &:hover {
                     text-decoration: none;
-                    background-color: rgba(198, 198, 198, 0.156);
+                    background-color: #ffffff;
 
                         h4 {
-                            color: rgb(210, 149, 169);
+                            color: #ffffff;
                         }
                     }
                 }
             }
             
         }
+        
         main {
             margin: 0px;
             
@@ -181,7 +213,7 @@ body {
 
                             cursor: pointer;
                             border-radius: 10px;
-                            border: 1px solid rgb(210, 149, 169);
+                            border: 1px solid #8B4513;
 
                             padding: 10px 15px;
                             font-size: 16px;
@@ -191,22 +223,22 @@ body {
                         }
 
                         .our_events_main_button {
-                            background-color: rgb(210, 149, 169);
+                            background-color: #8B4513;
                             color: white;
                             
 
                             &:hover {
-                            background-color: rgba(210, 149, 169, 0.15);
-                            color: rgb(210, 149, 169);
+                            background-color: #8b451330;
+                            color: #8B4513;
                             }
                         }
 
                         .sign_up_main_button {
-                            color: rgb(110, 110, 110);
+                            color: #8B4513;
 
                             &:hover {
-                            background-color: rgba(210, 149, 169, 0.15);
-                            color: rgb(210, 149, 169);
+                            background-color: #8b451310;
+                            color: #8B4513;
                             }
                         }
                     }
@@ -228,7 +260,7 @@ body {
                 background: linear-gradient(
                     70deg,
                     #fdfbfb,
-                    #ff14d028
+                    #8b451374
                 );
                 z-index: -1;
                 }
@@ -277,7 +309,7 @@ body {
                         margin-bottom: 20px;
                         flex: 0 1 calc(33.333% - 20px);
                         height: 500px;
-                        background-color: #fde4f59a;
+                        background-color: #8b451334;
                         border-radius: 15px;
                         padding: 0 25px;
                         display: flex;
@@ -285,8 +317,11 @@ body {
                         justify-content: space-between;
                         align-items: center;
                         box-shadow: 4px 14px 30px 7px rgba(43, 67, 85, 0.2);
-                        
-                        h5 {
+
+                        .cost_date {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 90%;
                             margin: 25px 0;
                             padding: 0;
                         }
@@ -295,7 +330,7 @@ body {
                             width: 100%;
                             border-radius: 15px;
                             overflow: hidden;
-                            box-shadow: 4px 14px 30px 7px rgba(43, 67, 85, 0.2);
+                            box-shadow: 4px 14px 30px 7px #381c086c;
                             margin: 0;
                             padding: 0;
                             img {
@@ -329,7 +364,7 @@ body {
                         margin-bottom: 20px;
                         flex: 0 1 calc(33.333% - 20px);
                         height: 400px;
-                        background-color: #fde4f59a;
+                        background-color: #8b451334;
                         border-radius: 15px;
                         padding: 0 25px;
                         display: flex;
@@ -342,7 +377,7 @@ body {
                             width: 100%;
                             border-radius: 15px;
                             overflow: hidden;
-                            box-shadow: 4px 14px 30px 7px rgba(43, 67, 85, 0.2);
+                            box-shadow: 4px 14px 30px 7px #381c086c;
                             margin: 0;
                             padding: 0;
                             img {
@@ -407,10 +442,10 @@ body {
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
-                    border: 1px solid rgb(210, 149, 169);
+                    border: 1px solid #8B4513;
                     cursor: pointer;
                     border-radius: 10px;
-                    background-color: rgb(210, 149, 169);
+                    background-color: #8B4513;
                     color: white;
                     padding: 10px 15px;
                     font-size: 16px;
@@ -420,8 +455,8 @@ body {
                         margin: 0 15px;
                     }
                     &:hover {
-                    background-color: rgba(210, 149, 169, 0.15);
-                    color: rgb(210, 149, 169);
+                    background-color: #8b451310;
+                    color: #8B4513;
                     }
                 }
             }
@@ -445,6 +480,7 @@ body {
             }
         }
     }
+    
 }
 @media (max-width: 768px) {
   .container {
