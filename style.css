@@ -54,6 +54,10 @@ body h4 {
   font-weight: 300;
   font-size: 16px;
 }
+body h5 {
+  font-weight: 300;
+  font-size: 14px;
+}
 body p {
   font-weight: 300;
   font-size: 16px;
@@ -256,21 +260,42 @@ body .container main .events .events_list {
   gap: 20px;
 }
 body .container main .events .events_list .event_list {
-  flex: 0 1 calc(33.333% - 20px);
   margin-bottom: 20px;
+  flex: 0 1 calc(33.333% - 20px);
+  height: 500px;
   background-color: rgba(253, 228, 245, 0.6039215686);
   border-radius: 15px;
   padding: 0 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 4px 14px 30px 7px rgba(43, 67, 85, 0.2);
+}
+body .container main .events .events_list .event_list h5 {
+  margin: 25px 0;
+  padding: 0;
+}
+body .container main .events .events_list .event_list .img_container {
+  height: 80%;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 4px 14px 30px 7px rgba(43, 67, 85, 0.2);
+  margin: 0;
+  padding: 0;
+}
+body .container main .events .events_list .event_list .img_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 body .container main .events .events_list .event_list .event_description {
   padding: 15px;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.7764705882);
   box-shadow: 4px 14px 25px -8px rgba(34, 60, 80, 0.2);
+  margin: 30px 0 0;
 }
 body .container main .textile {
   padding: 25px 0;
@@ -298,9 +323,6 @@ body .container main .textile .textile_items .textile_item {
   align-items: center;
   box-shadow: 4px 14px 30px 7px rgba(43, 67, 85, 0.2);
 }
-body .container main .textile .textile_items .textile_item h3 {
-  padding: 10px;
-}
 body .container main .textile .textile_items .textile_item .img_container {
   height: 80%;
   width: 100%;
@@ -315,6 +337,9 @@ body .container main .textile .textile_items .textile_item .img_container img {
   height: 100%;
   object-fit: cover;
 }
+body .container main .textile .textile_items .textile_item h3 {
+  padding: 10px;
+}
 body .container main .textile .textile_items .textile_item h4 {
   margin: 30px 0;
   padding: 15px;
@@ -323,7 +348,7 @@ body .container main .textile .textile_items .textile_item h4 {
   box-shadow: 4px 14px 25px -8px rgba(34, 60, 80, 0.2);
 }
 body .container main .sign_up {
-  margin: 60px 10px;
+  margin: 60px 10px 30px;
 }
 body .container main .sign_up h2 {
   text-align: center;
@@ -357,6 +382,9 @@ body .container main .sign_up form .all_forms_container .form_container input, b
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 300px;
+}
+body .container main .sign_up form h5 {
+  margin-top: 20px;
 }
 body .container main .sign_up .submit {
   margin: 20px;
@@ -486,6 +514,10 @@ body .container footer::before {
   .container .all_forms_container {
     flex-direction: column;
     align-items: center;
+  }
+  .container .event_list .img_container {
+    height: auto;
+    aspect-ratio: 4/3;
   }
 }
 
