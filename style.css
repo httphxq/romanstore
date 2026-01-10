@@ -68,7 +68,7 @@ body .container header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   padding: 10px 0 30px 0;
   position: relative;
   flex-wrap: wrap;
@@ -79,7 +79,7 @@ body .container header::after {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 100vw;
   height: 1px;
   background-color: #e8e8e8;
   margin: 0;
@@ -94,6 +94,7 @@ body .container header nav {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 body .container header nav a {
   display: inline-flex;
@@ -112,7 +113,18 @@ body .container header nav a h4 {
 body .container header nav a:hover {
   text-decoration: underline;
 }
+body .container header nav .events_button {
+  margin: 0;
+  padding: 0;
+}
+body .container header nav .about_us_button {
+  padding: 5px 20px 5px 25px;
+}
+body .container header nav .textile_button {
+  padding: 5px 15px;
+}
 body .container header nav .sign_up_button {
+  margin: 0 10px;
   border: 1px solid rgb(210, 149, 169);
 }
 body .container header nav .sign_up_button h4 {
@@ -149,14 +161,14 @@ body .container main .main_info h3 {
 body .container main .main_info .main_info_about_us {
   flex: 1;
   margin-right: 20px;
-  max-width: 60%;
+  min-width: 60%;
   margin: 0;
   padding: 15px;
 }
 body .container main .main_info .main_info_about_us .main_info_buttons {
   display: flex;
   gap: 10px;
-  padding: 15px 0;
+  padding: 30px 0;
 }
 body .container main .main_info .main_info_about_us .main_info_buttons a {
   display: inline-flex;
@@ -189,6 +201,7 @@ body .container main .main_info img {
   max-width: 250px;
   height: auto;
   border-radius: 20px;
+  margin-bottom: 30px;
 }
 body .container main .main_info::before {
   content: "";
@@ -196,7 +209,7 @@ body .container main .main_info::before {
   inset: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 100vw;
   background: linear-gradient(70deg, #fdfbfb, rgba(255, 20, 208, 0.1568627451));
   z-index: -1;
 }
@@ -206,7 +219,7 @@ body .container main .about_us {
 }
 body .container main .about_us h2 {
   margin: 0;
-  padding: 0;
+  padding: 0 0 20px 0;
 }
 body .container main .about_us .about_us_container {
   display: flex;
@@ -216,37 +229,35 @@ body .container main .about_us .about_us_container {
   align-items: first baseline;
 }
 body .container main .about_us .about_us_container .about_us_text {
-  width: 60%;
   margin-right: 20px;
-  max-width: 50%;
+  min-width: 50%;
 }
 body .container main .about_us .about_us_container .about_us_text p {
   margin: 0;
   padding: 0;
 }
 body .container main .about_us .about_us_container .about_us_catalog {
-  width: 20%;
+  min-width: 20%;
   margin: 0;
   padding: 0;
 }
-body .container .events {
+body .container main .events {
   margin: 0;
   padding: 50px 0 25px;
 }
-body .container .events h2 {
+body .container main .events h2 {
   margin: 0;
   padding: 0 0 30px 0;
 }
-body .container .events .events_list {
+body .container main .events .events_list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-body .container .events .events_list .event_list {
-  min-width: 20%;
-  margin-bottom: 20px;
-  width: 25%;
   gap: 20px;
+}
+body .container main .events .events_list .event_list {
+  flex: 0 1 calc(33.333% - 20px);
+  margin-bottom: 20px;
   background-color: rgba(253, 228, 245, 0.6039215686);
   border-radius: 15px;
   padding: 0 25px;
@@ -255,24 +266,28 @@ body .container .events .events_list .event_list {
   justify-content: space-between;
   box-shadow: 4px 14px 30px 7px rgba(43, 67, 85, 0.2);
 }
-body .container .events .events_list .event_list .event_description {
+body .container main .events .events_list .event_list .event_description {
   padding: 15px;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.7764705882);
   box-shadow: 4px 14px 25px -8px rgba(34, 60, 80, 0.2);
 }
-body .container .textile {
+body .container main .textile {
   padding: 25px 0;
 }
-body .container .textile .textile_items {
+body .container main .textile h2 {
+  padding: 0 0 30px 0;
+  margin: 0;
+}
+body .container main .textile .textile_items {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  min-width: 20%;
+  gap: 20px;
 }
-body .container .textile .textile_items .textile_item {
+body .container main .textile .textile_items .textile_item {
   margin-bottom: 20px;
-  width: 25%;
+  flex: 0 1 calc(33.333% - 20px);
   height: 400px;
   background-color: rgba(253, 228, 245, 0.6039215686);
   border-radius: 15px;
@@ -283,10 +298,10 @@ body .container .textile .textile_items .textile_item {
   align-items: center;
   box-shadow: 4px 14px 30px 7px rgba(43, 67, 85, 0.2);
 }
-body .container .textile .textile_items .textile_item h3 {
+body .container main .textile .textile_items .textile_item h3 {
   padding: 10px;
 }
-body .container .textile .textile_items .textile_item .img_container {
+body .container main .textile .textile_items .textile_item .img_container {
   height: 80%;
   width: 100%;
   border-radius: 15px;
@@ -295,69 +310,92 @@ body .container .textile .textile_items .textile_item .img_container {
   margin: 0;
   padding: 0;
 }
-body .container .textile .textile_items .textile_item .img_container img {
+body .container main .textile .textile_items .textile_item .img_container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-body .container .textile .textile_items .textile_item h4 {
+body .container main .textile .textile_items .textile_item h4 {
   margin: 30px 0;
   padding: 15px;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.7764705882);
   box-shadow: 4px 14px 25px -8px rgba(34, 60, 80, 0.2);
 }
-body .container .sign_up {
-  margin: 40px;
+body .container main .sign_up {
+  margin: 60px 10px;
 }
-body .container .sign_up h2 {
+body .container main .sign_up h2 {
   text-align: center;
+  margin: 20px 0 40px;
 }
-body .container .sign_up form {
+body .container main .sign_up form {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
 }
-body .container .sign_up form .all_forms_container {
+body .container main .sign_up form .all_forms_container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 0 30px;
+  justify-content: space-between;
 }
-body .container .sign_up form .all_forms_container .form_container label {
+body .container main .sign_up form .all_forms_container .form_container {
+  display: flex;
+  flex-direction: column;
+}
+body .container main .sign_up form .all_forms_container .form_container label {
   margin: 0 15px 5px 0;
 }
-body .container .sign_up form .all_forms_container .form_container input, body .container .sign_up form .all_forms_container .form_container select {
+body .container main .sign_up form .all_forms_container .form_container input, body .container main .sign_up form .all_forms_container .form_container select {
   margin-bottom: 10px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  width: 300px;
 }
-body .container .sign_up .submit {
-  margin: 0;
-  background-color: rgb(210, 149, 169);
-  color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 4px;
-  width: 30%;
-}
-body .container .sign_up .submit h4 {
-  margin: 10px 15px;
-}
-body .container .sign_up .submit {
-  cursor: pointer;
-}
-body .container .sign_up .submit:hover {
-  background-color: white;
+body .container main .sign_up .submit {
+  margin: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgb(210, 149, 169);
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(210, 149, 169);
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 400;
+  transition: 0.2s ease;
+}
+body .container main .sign_up .submit h4 {
+  margin: 0 15px;
+}
+body .container main .sign_up .submit:hover {
+  background-color: rgba(210, 149, 169, 0.15);
   color: rgb(210, 149, 169);
 }
 body .container footer {
   text-align: center;
-  padding: 20px 0;
+  padding: 30px 0 10px;
+  position: relative;
+}
+body .container footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background-color: #e8e8e8;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
@@ -377,6 +415,77 @@ body .container footer {
   }
   .container header nav a {
     margin: 5px;
+  }
+  .container .about_us_container {
+    flex-wrap: wrap;
+  }
+  .container .about_us_container .about_us_text {
+    width: 90%;
+  }
+  .container .about_us_container .about_us_text p {
+    margin: 0;
+    padding: 0;
+  }
+  .container .about_us_container .about_us_catalog {
+    min-width: 20%;
+    margin: 0;
+    padding: 0;
+  }
+  .container .events_list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .events_list .event_list {
+    width: 100%;
+    margin-bottom: 20px;
+    flex: 1 1 100%;
+  }
+  .container header {
+    justify-content: center;
+  }
+  .container nav {
+    width: 100%;
+    justify-content: center;
+  }
+  .container .main_info {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .container .main_info .main_info_about_us {
+    max-width: 100%;
+    padding: 0;
+  }
+  .container .main_info .main_info_about_us .main_info_buttons {
+    justify-content: space-around;
+  }
+  .container .main_info .main_info h1,
+  .container .main_info .main_info h3 {
+    width: 100%;
+    text-align: left;
+  }
+  .container .textile {
+    padding: 20px 0;
+  }
+  .container .textile_items {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .container .textile_item {
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .container .textile_item .img_container {
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+  .container .textile_item h4 {
+    margin: 20px 0 0;
+  }
+  .container .all_forms_container {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
