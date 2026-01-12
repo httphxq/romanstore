@@ -22,3 +22,44 @@ window.addEventListener('scroll', () => {
 
     curtain.style.opacity = opacity;
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("signup-form");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const data = {
+            name: document.getElementById("name").value.trim(),
+            telegram: document.getElementById("telegram").value.trim(),
+            event: document.getElementById("event").value
+        };
+
+        if (!data.name || !data.telegram) {
+            alert("Заполните все поля");
+            return;
+        }
+
+        try {
+            const response = await fetch("http://127.0.0.1:8000/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                alert("Вы успешно записались!");
+                form.reset();
+            } else {
+                alert(result.error || "Ошибка записи");
+            }
+        } catch (error) {
+            alert("Ошибка соединения с сервером");
+            console.error(error);
+        }
+    });
+});

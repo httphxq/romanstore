@@ -139,29 +139,37 @@
         </section>
         <section class="sign_up" id="sign_up">
             <h2>Записаться на мероприятие</h2>
-            <form>
+            <form id="signup-form">
                 <div class="all_forms_container">
+
                     <div class="form_container">
                         <label for="name">Имя:</label>
                         <input type="text" id="name" name="name" required>
                     </div>
+
                     <div class="form_container">
                         <label for="telegram">Ник Telegram для оплаты*:</label>
                         <input type="text" id="telegram" name="telegram" required>
                     </div>
+
                     <div class="form_container">
                         <label for="event">Мероприятие:</label>
                         <select id="event" name="event" required>
-                            <option value="pregnancy">Pregnancy event 7 февраля</option>
-                            <option value="mom">Mom's event 7 марта</option>
-                            <option value="planning">Планирование беременности 19 апреля</option>
+                            <option value="pregnancy">Pregnancy event — 7 февраля</option>
+                            <option value="mom">Mom's event — 7 марта</option>
+                            <option value="planning">Планирование беременности — 19 апреля</option>
                         </select>
                     </div>
 
                 </div>
-                <button class="submit"><h4>Записаться</h4></button>
+
+                <button type="submit" class="submit">Записаться</button>
+
                 <h3>В течение 48 часов с вами свяжется наш менеджер для направления ссылки на оплату.</h3>
-                <h5>*Убедитесь, что вы указали правильный ник и что с вами возможно связаться (отключите функцию "сообщения для Премиум пользователей Telegram" или платные сообщения)</h5>
+                <h5>
+                    * Убедитесь, что вы указали правильный ник и что с вами возможно связаться
+                    (отключите платные сообщения Telegram)
+                </h5>
             </form>
         </section>
        
