@@ -15,7 +15,7 @@ const curtain = document.querySelector('.top-curtain');
 
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    const maxFade = 1000; 
+    const maxFade = 600; 
 
     let opacity = 1 - scrollY / maxFade;
     if (opacity < 0) opacity = 0;
