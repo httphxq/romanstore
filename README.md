@@ -55,14 +55,23 @@ Hosting
 GitHub Pages — frontend deployment
 
 📂 Project Structure
+
 /
+
 ├── index.html        # Main page
+
 ├── style.scss       # Source styles
+
 ├── style.css        # Compiled styles
+
 ├── script.js        # Frontend logic
+
 ├── main.py          # Backend logic
+
 ├── fonts/           # Custom fonts
+
 ├── img/             # Images
+
 └── README.md
 
 📝 How the Sign-Up Form Works
