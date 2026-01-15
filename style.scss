@@ -27,6 +27,12 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+    font-family: 'Montserat';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -43,7 +49,7 @@ body {
         height: 1400px; 
         background: linear-gradient(
             to bottom,
-            rgb(70, 47, 36),
+            #3f1f08,
             rgba(255, 255, 255, 0)
         );
         pointer-events: none; 
@@ -100,9 +106,12 @@ body {
             padding: 0;
             }
             h1 {
+                font-family: 'Montserat';
                 margin: 0;
                 color: white;
                 z-index: 1000;
+                font-weight: 400;
+                font-size: 45px;
             }
             h2 {
                 color: white;
@@ -144,7 +153,7 @@ body {
                     z-index: 1000;
                     }
                     &:hover {
-                        text-decoration: underline;
+                        text-decoration: none;
                     }
                 }
                 .events_button {
@@ -193,10 +202,12 @@ body {
                 h1 {
                     margin: 0;
                     padding: 15px 0;
+                    color: white;
                 }
                 h3 {
                     margin: 0;
                     padding: 15px 0;
+                    color: white;
                 }
                 .main_info_about_us {
                     flex: 1;
@@ -263,8 +274,8 @@ body {
                 width: 100vw;
                 background: linear-gradient(
                     70deg,
-                    #fdfbfb,
-                    #8b451374
+                    #723f1b37,
+                    #713810ae
                 );
                 z-index: -1;
                 }
@@ -291,7 +302,7 @@ body {
                     }
                     .about_us_catalog {
                         min-width: 20%;
-                        margin: 0;
+                        margin: 30px 0;
                         padding: 0;
                     }
                 }   

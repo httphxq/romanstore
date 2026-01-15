@@ -28,6 +28,12 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Montserat";
+  src: url("fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -44,7 +50,7 @@ body .top-curtain {
   left: 0;
   width: 100%;
   height: 1400px;
-  background: linear-gradient(to bottom, rgb(70, 47, 36), rgba(255, 255, 255, 0));
+  background: linear-gradient(to bottom, #3f1f08, rgba(255, 255, 255, 0));
   pointer-events: none;
   z-index: 999;
   transition: opacity 0.1s ease;
@@ -100,9 +106,12 @@ body .container header::after {
   padding: 0;
 }
 body .container header h1 {
+  font-family: "Montserat";
   margin: 0;
   color: white;
   z-index: 1000;
+  font-weight: 400;
+  font-size: 45px;
 }
 body .container header h2 {
   color: white;
@@ -145,7 +154,7 @@ body .container header nav a h4 {
   z-index: 1000;
 }
 body .container header nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 body .container header nav .events_button {
   margin: 0;
@@ -188,10 +197,12 @@ body .container main .main_info {
 body .container main .main_info h1 {
   margin: 0;
   padding: 15px 0;
+  color: white;
 }
 body .container main .main_info h3 {
   margin: 0;
   padding: 15px 0;
+  color: white;
 }
 body .container main .main_info .main_info_about_us {
   flex: 1;
@@ -245,7 +256,7 @@ body .container main .main_info::before {
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  background: linear-gradient(70deg, #fdfbfb, rgba(139, 69, 19, 0.4549019608));
+  background: linear-gradient(70deg, rgba(114, 63, 27, 0.2156862745), rgba(113, 56, 16, 0.6823529412));
   z-index: -1;
 }
 body .container main .about_us {
@@ -273,7 +284,7 @@ body .container main .about_us .about_us_container .about_us_text p {
 }
 body .container main .about_us .about_us_container .about_us_catalog {
   min-width: 20%;
-  margin: 0;
+  margin: 30px 0;
   padding: 0;
 }
 body .container main .events {
